@@ -1,11 +1,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-    lazy var game = Concentration(numberOfPairsOfCards: (buttons.count + 1) / 2)
+    lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
     var flipCount = 0 {
         didSet {
             flipCountLabel.text = "Flips: \(flipCount)"
         }
+    }
+    var numberOfPairsOfCards: Int {
+        (buttons.count + 1) / 2
     }
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var flipCountLabel: UILabel!
