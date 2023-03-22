@@ -3,17 +3,17 @@ import UIKit
 class ViewController: UIViewController {
     lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
     var flipCount = 0 {
-        didSet {
-            flipCountLabel.text = "Flips: \(flipCount)"
-        }
+        didSet { updateFlipCountLabel() }
     }
     var numberOfPairsOfCards: Int {
         (buttons.count + 1) / 2
     }
     @IBOutlet var buttons: [UIButton]!
-    @IBOutlet weak var flipCountLabel: UILabel!
-    var emojiChoices = ["👻", "🎃", "🤡", "💀", "🤖", "🤠", "😹", "😈"]
-    var emoji: [Int: String] = [:]
+    @IBOutlet weak var flipCountLabel: UILabel! {
+        didSet { updateFlipCountLabel() }
+    }
+    var emojiChoices = "👻🎃🤡💀🤖🤠😹😈"
+    var emoji: [Card: String] = [:]
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViewFromModel()
@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         for index in buttons.indices {
             let button = buttons[index]
             let card = game.cards[index]
-            print(card.identifier)
             let emoji = emoji(for: card)
             if card.isFaceUp {
                 button.setTitle(emoji, for: .normal)
@@ -44,12 +43,19 @@ class ViewController: UIViewController {
     }
     
     func emoji(for card: Card) -> String {
-
-        if emoji[card.identifier] == nil, emojiChoices.count > 0 {
-            let randomIndex = Int.random(in: 0..<emojiChoices.count)
-            emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
+        if emoji[card] == nil, emojiChoices.count > 0 {
+            let randomIndex = emojiChoices.index(emojiChoices.startIndex, offsetBy: Int.random(in: 0..<emojiChoices.count))
+            emoji[card] = String(emojiChoices.remove(at: randomIndex))
         }
-        return emoji[card.identifier] ?? "?"
+        return emoji[card] ?? "?"
+    }
+    private func updateFlipCountLabel() {
+        let attributes: [NSAttributedString.Key: Any] = [
+            .strokeWidth: 5.0,
+            .strokeColor: UIColor.orange
+        ]
+        let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes)
+        flipCountLabel.attributedText = attributedString
     }
 }
 
