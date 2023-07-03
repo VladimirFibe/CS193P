@@ -2,32 +2,47 @@ import SwiftUI
 
 struct ContentView: View {
     var emojis = ["🚗", "🚕", "🚌", "🚎", "🏎️", "🚓", "🚑", "🚒", "🚐", "🛻", "🚚", "🚜", "🚲", "🛵", "🛺", "🚔", "🚍", "🚖", "🚃", "🚋", "🚂", "✈️", "🚀", "🛸", "🚁", "🛶", "⛵️", "🚤", "🛳️", "🚈", "🚊", "🚠"]
-    @State var emojiCount = 3
+    @State var emojiCount = 20
     var body: some View {
         VStack {
-            HStack {
-                ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
-                    CardView(content: emoji)
+            ScrollView(.vertical) {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 70), spacing: 10)], spacing: 10) {
+                    ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
+                        CardView(content: emoji)
+                    }
                 }
             }
             HStack {
-                Button {
-                    emojiCount -= 1
-                } label: {
-                    Image(systemName: "minus.circle")
-                        .imageScale(.large)
-                }
+                remove
                 Spacer()
-                Button {
-                    emojiCount += 1
-                } label: {
-                    Image(systemName: "plus.circle")
-                        .imageScale(.large)
-                }
+                add
             }
         }
         .foregroundColor(.red)
         .padding()
+    }
+    var add: some View {
+        Button {
+            if emojiCount < emojis.count {
+                emojiCount += 1
+            }
+        } label: {
+            Image(systemName: "plus.circle")
+                .imageScale(.large)
+        }
+        .disabled(emojiCount == emojis.count)
+    }
+    
+    var remove: some View {
+        Button {
+            if emojiCount > 1 {
+                emojiCount -= 1
+            }
+        } label: {
+            Image(systemName: "minus.circle")
+                .imageScale(.large)
+        }
+        .disabled(emojiCount == 1)
     }
 }
 
@@ -43,7 +58,7 @@ struct CardView: View {
             let shape = RoundedRectangle(cornerRadius: 20)
             if isFaceUp {
                 shape.fill(Color.white)
-                shape.stroke(lineWidth: 3)
+                shape.strokeBorder(lineWidth: 3)
                 Text(content).font(.largeTitle)
             } else {
                 shape
@@ -52,5 +67,6 @@ struct CardView: View {
         .onTapGesture {
             isFaceUp.toggle()
         }
+        .aspectRatio(2/3, contentMode: .fill)
     }
 }
