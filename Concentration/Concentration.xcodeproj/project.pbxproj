@@ -42,41 +42,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		272D3C4529C56077002F7EBF /* Supporting Files */ = {
+		023D69312A777D720072AA04 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				2761D11A29C4850800B388C8 /* AppDelegate.swift */,
 				2761D11C29C4850800B388C8 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		023D69322A777D890072AA04 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				272D3C4B29C5619C002F7EBF /* Card.swift */,
+				272D3C4929C560C4002F7EBF /* Concentration.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		023D69342A77A4810072AA04 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2761D12029C4850800B388C8 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		023D69352A77A4980072AA04 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2761D11E29C4850800B388C8 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		272D3C4529C56077002F7EBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				2761D12329C4850A00B388C8 /* Assets.xcassets */,
 				2761D12529C4850A00B388C8 /* LaunchScreen.storyboard */,
 				2761D12829C4850A00B388C8 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		272D3C4629C56094002F7EBF /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				2761D11E29C4850800B388C8 /* ViewController.swift */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		272D3C4729C560A0002F7EBF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2761D12029C4850800B388C8 /* Main.storyboard */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		272D3C4829C560AA002F7EBF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				272D3C4929C560C4002F7EBF /* Concentration.swift */,
-				272D3C4B29C5619C002F7EBF /* Card.swift */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		2761D10E29C4850800B388C8 = {
@@ -99,9 +106,10 @@
 		2761D11929C4850800B388C8 /* Concentration */ = {
 			isa = PBXGroup;
 			children = (
-				272D3C4829C560AA002F7EBF /* Model */,
-				272D3C4729C560A0002F7EBF /* View */,
-				272D3C4629C56094002F7EBF /* Controller */,
+				023D69352A77A4980072AA04 /* Controllers */,
+				023D69342A77A4810072AA04 /* Views */,
+				023D69322A777D890072AA04 /* Models */,
+				023D69312A777D720072AA04 /* App */,
 				272D3C4529C56077002F7EBF /* Supporting Files */,
 			);
 			path = Concentration;
@@ -338,6 +346,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -367,6 +376,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

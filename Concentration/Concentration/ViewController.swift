@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         }
         return emoji[card] ?? "?"
     }
+    
     private func updateFlipCountLabel() {
         let attributes: [NSAttributedString.Key: Any] = [
             .strokeWidth: 5.0,
