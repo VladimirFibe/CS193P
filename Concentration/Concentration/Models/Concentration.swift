@@ -1,8 +1,8 @@
 import Foundation
 
 struct Concentration {
-    var cards: [Card] = []
-    var indexOfOneAndOnlyFaceUpCard: Int? {
+    private(set) var cards: [Card] = []
+    private var indexOfOneAndOnlyFaceUpCard: Int? {
         get {
             cards.indices.filter { cards[$0].isFaceUp }.oneAndOnly
         }

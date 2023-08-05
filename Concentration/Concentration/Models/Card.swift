@@ -7,8 +7,8 @@ struct Card: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(identifier)
     }
-    static var identifierFactory = -1
-    static func getUniqueIdentifier() -> Int {
+    private static var identifierFactory = -1
+    private static func getUniqueIdentifier() -> Int {
         identifierFactory += 1
         return identifierFactory
     }
