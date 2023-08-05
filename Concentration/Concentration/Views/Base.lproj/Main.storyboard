@@ -147,7 +147,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTi-ml-zYa">
-                                <rect key="frame" x="32" y="786" width="360" height="32"/>
+                                <rect key="frame" x="16" y="786" width="361" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="5Oz-he-cUu"/>
                                 </constraints>
@@ -160,8 +160,8 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EEz-Dq-fDe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="CGT-gZ-AKM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gTi-ml-zYa" secondAttribute="trailing" constant="1" id="bAI-L6-GmL"/>
-                            <constraint firstItem="gTi-ml-zYa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="fIl-0X-4ki"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gTi-ml-zYa" secondAttribute="trailing" constant="16" id="bAI-L6-GmL"/>
+                            <constraint firstItem="gTi-ml-zYa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fIl-0X-4ki"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gTi-ml-zYa" secondAttribute="bottom" id="jyP-jC-F8d"/>
                             <constraint firstItem="gTi-ml-zYa" firstAttribute="top" secondItem="EEz-Dq-fDe" secondAttribute="bottom" constant="8" symbolic="YES" id="lIT-zG-wgw"/>
                             <constraint firstItem="EEz-Dq-fDe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="t7M-BK-fVN"/>
