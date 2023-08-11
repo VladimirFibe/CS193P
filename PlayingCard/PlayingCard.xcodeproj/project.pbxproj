@@ -15,7 +15,7 @@
 		024F70B52A8074FA00CBB64E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024F70B32A8074FA00CBB64E /* LaunchScreen.storyboard */; };
 		024F70BD2A80754A00CBB64E /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F70BC2A80754A00CBB64E /* PlayingCard.swift */; };
 		02D3B3A32A852AC600F3A25D /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3B3A22A852AC600F3A25D /* PlayingCardDeck.swift */; };
-		02D3B3A52A85374600F3A25D /* PlaingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3B3A42A85374600F3A25D /* PlaingCardView.swift */; };
+		02D3B3A52A85374600F3A25D /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3B3A42A85374600F3A25D /* PlayingCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		024F70B62A8074FA00CBB64E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		024F70BC2A80754A00CBB64E /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
 		02D3B3A22A852AC600F3A25D /* PlayingCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
-		02D3B3A42A85374600F3A25D /* PlaingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaingCardView.swift; sourceTree = "<group>"; };
+		02D3B3A42A85374600F3A25D /* PlayingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				02D3B3A02A85265600F3A25D /* Supporting Files */,
 				02D3B3A12A85267C00F3A25D /* App */,
 				024F70AC2A8074F900CBB64E /* ViewController.swift */,
-				02D3B3A42A85374600F3A25D /* PlaingCardView.swift */,
+				02D3B3A42A85374600F3A25D /* PlayingCardView.swift */,
 				024F70BC2A80754A00CBB64E /* PlayingCard.swift */,
 				02D3B3A22A852AC600F3A25D /* PlayingCardDeck.swift */,
 				024F70AE2A8074F900CBB64E /* Main.storyboard */,
@@ -168,7 +168,7 @@
 				02D3B3A32A852AC600F3A25D /* PlayingCardDeck.swift in Sources */,
 				024F70BD2A80754A00CBB64E /* PlayingCard.swift in Sources */,
 				024F70AB2A8074F900CBB64E /* SceneDelegate.swift in Sources */,
-				02D3B3A52A85374600F3A25D /* PlaingCardView.swift in Sources */,
+				02D3B3A52A85374600F3A25D /* PlayingCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
