@@ -16,6 +16,8 @@
 		024F70BD2A80754A00CBB64E /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F70BC2A80754A00CBB64E /* PlayingCard.swift */; };
 		02D3B3A32A852AC600F3A25D /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3B3A22A852AC600F3A25D /* PlayingCardDeck.swift */; };
 		02D3B3A52A85374600F3A25D /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3B3A42A85374600F3A25D /* PlayingCardView.swift */; };
+		02D64CAF2A9F14520037173D /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D64CAE2A9F14520037173D /* QRCodeScannerViewController.swift */; };
+		02D64CB22A9F15A40037173D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 02D64CB12A9F15A40037173D /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,7 @@
 		024F70BC2A80754A00CBB64E /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
 		02D3B3A22A852AC600F3A25D /* PlayingCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
 		02D3B3A42A85374600F3A25D /* PlayingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardView.swift; sourceTree = "<group>"; };
+		02D64CAE2A9F14520037173D /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D64CB22A9F15A40037173D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +69,7 @@
 				02D3B3A02A85265600F3A25D /* Supporting Files */,
 				02D3B3A12A85267C00F3A25D /* App */,
 				024F70AC2A8074F900CBB64E /* ViewController.swift */,
+				02D64CAE2A9F14520037173D /* QRCodeScannerViewController.swift */,
 				02D3B3A42A85374600F3A25D /* PlayingCardView.swift */,
 				024F70BC2A80754A00CBB64E /* PlayingCard.swift */,
 				02D3B3A22A852AC600F3A25D /* PlayingCardDeck.swift */,
@@ -108,6 +113,9 @@
 			dependencies = (
 			);
 			name = PlayingCard;
+			packageProductDependencies = (
+				02D64CB12A9F15A40037173D /* SnapKit */,
+			);
 			productName = PlayingCard;
 			productReference = 024F70A52A8074F900CBB64E /* PlayingCard.app */;
 			productType = "com.apple.product-type.application";
@@ -136,6 +144,9 @@
 				Base,
 			);
 			mainGroup = 024F709C2A8074F900CBB64E;
+			packageReferences = (
+				02D64CB02A9F15A40037173D /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 024F70A62A8074F900CBB64E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -166,6 +177,7 @@
 				024F70AD2A8074F900CBB64E /* ViewController.swift in Sources */,
 				024F70A92A8074F900CBB64E /* AppDelegate.swift in Sources */,
 				02D3B3A32A852AC600F3A25D /* PlayingCardDeck.swift in Sources */,
+				02D64CAF2A9F14520037173D /* QRCodeScannerViewController.swift in Sources */,
 				024F70BD2A80754A00CBB64E /* PlayingCard.swift in Sources */,
 				024F70AB2A8074F900CBB64E /* SceneDelegate.swift in Sources */,
 				02D3B3A52A85374600F3A25D /* PlayingCardView.swift in Sources */,
@@ -244,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -298,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -318,6 +330,7 @@
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlayingCard/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please! QR Code!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -346,6 +359,7 @@
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlayingCard/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please! QR Code!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -386,6 +400,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		02D64CB02A9F15A40037173D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		02D64CB12A9F15A40037173D /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02D64CB02A9F15A40037173D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 024F709D2A8074F900CBB64E /* Project object */;
 }
