@@ -13,6 +13,7 @@
 		0272BE3F2ACF90A200A89C87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0272BE3D2ACF90A200A89C87 /* LaunchScreen.storyboard */; };
 		0272BE472ACF910C00A89C87 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0272BE462ACF910C00A89C87 /* FaceView.swift */; };
 		0272BE4B2ACFAC9D00A89C87 /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = 0272BE4A2ACFAC9D00A89C87 /* face.png */; };
+		02A2AA1A2AD05BED000DA7A7 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A2AA192AD05BED000DA7A7 /* FacialExpression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		0272BE462ACF910C00A89C87 /* FaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		0272BE482ACFAC5100A89C87 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0272BE4A2ACFAC9D00A89C87 /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face.png; sourceTree = "<group>"; };
+		02A2AA192AD05BED000DA7A7 /* FacialExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				0272BE322ACF90A000A89C87 /* AppDelegate.swift */,
 				0272BE362ACF90A000A89C87 /* ViewController.swift */,
 				0272BE462ACF910C00A89C87 /* FaceView.swift */,
+				02A2AA192AD05BED000DA7A7 /* FacialExpression.swift */,
 				0272BE3B2ACF90A200A89C87 /* Assets.xcassets */,
 				0272BE3D2ACF90A200A89C87 /* LaunchScreen.storyboard */,
 				0272BE402ACF90A200A89C87 /* Info.plist */,
@@ -150,6 +153,7 @@
 			files = (
 				0272BE372ACF90A000A89C87 /* ViewController.swift in Sources */,
 				0272BE332ACF90A000A89C87 /* AppDelegate.swift in Sources */,
+				02A2AA1A2AD05BED000DA7A7 /* FacialExpression.swift in Sources */,
 				0272BE472ACF910C00A89C87 /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

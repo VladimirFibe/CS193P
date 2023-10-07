@@ -2,7 +2,7 @@ import UIKit
 
 class FaceView: UIView {
     private var skullRadius: CGFloat {
-        Ratios.scale * min(bounds.width, bounds.height) / 2
+        scale * min(bounds.width, bounds.height) / 2
     }
 
     private var skullCenter: CGPoint {
@@ -17,7 +17,7 @@ class FaceView: UIView {
             endAngle: 2 * CGFloat.pi,
             clockwise: false
         )
-        path.lineWidth = Ratios.lineWidth
+        path.lineWidth = lineWidth
         return path
     }
 
@@ -34,7 +34,7 @@ class FaceView: UIView {
         let eyeCenter = centerOfEye(eye)
 
         let path: UIBezierPath
-        if Ratios.eyesOpen {
+        if eyesOpen {
             path = UIBezierPath(
                 arcCenter: eyeCenter,
                 radius: eyeRadius,
@@ -47,7 +47,7 @@ class FaceView: UIView {
             path.move(to: CGPoint(x: eyeCenter.x - eyeRadius, y: eyeCenter.y))
             path.addLine(to: CGPoint(x: eyeCenter.x + eyeRadius, y: eyeCenter.y))
         }
-        path.lineWidth = Ratios.lineWidth
+        path.lineWidth = lineWidth
         return path
     }
 
@@ -63,7 +63,7 @@ class FaceView: UIView {
             height: mouthHeight
         )
 
-        let smileOffset = max(-1, min(Ratios.mouthCurvature, 1)) * mouthRect.height
+        let smileOffset = max(-1, min(mouthCurvature, 1)) * mouthRect.height
         let start = CGPoint(x: mouthRect.minX, y: mouthRect.midY)
         let end = CGPoint(x: mouthRect.maxX, y: mouthRect.midY)
         let cp1 = CGPoint(
@@ -77,25 +77,30 @@ class FaceView: UIView {
         let path = UIBezierPath()
         path.move(to: start)
         path.addCurve(to: end, controlPoint1: cp1, controlPoint2: cp2)
-        path.lineWidth = Ratios.lineWidth
+        path.lineWidth = lineWidth
         return path
     }
 
     override func draw(_ rect: CGRect) {
-        Ratios.color.set()
+        color.set()
         pathForSkull().stroke()
         pathForEye(.left).stroke()
         pathForEye(.right).stroke()
         pathForMouth().stroke()
     }
 
+    var scale = 0.9 { didSet { setNeedsDisplay() }}
+    private var color = UIColor.green
+    private var eyesOpen = false { didSet { setNeedsDisplay() }}
+    private var lineWidth = 5.0
+    private var mouthCurvature = 1.0 { didSet { setNeedsDisplay() }}
+
+    func configure(with eyes: Bool, mouthCurvature: Double) {
+        eyesOpen = eyes
+        self.mouthCurvature = mouthCurvature
+    }
+
     private struct Ratios {
-        static let scale = 0.9
-        static let color = UIColor.green
-        static let eyesOpen = true
-        static let lineWidth = 5.0
-        static let mouthCurvature = 0.5
-        
         static let eyeOffset = 3.0
         static let eyeRadius = 10.0
         static let mouthWidth = 1.0
@@ -106,6 +111,15 @@ class FaceView: UIView {
     private enum Eye {
         case left
         case right
+    }
+
+    @objc func changeScale(_ sender: UIPinchGestureRecognizer) {
+        switch sender.state {
+        case .changed, .ended:
+            scale *= sender.scale
+            sender.scale = 1
+        default: break
+        }
     }
 }
 

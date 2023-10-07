@@ -107,8 +107,8 @@ final class CalculatorViewController: UIViewController {
         let textCurrentlyInDisplay = displayLabel.text ?? ""
         if digit == "." {
             if !textCurrentlyInDisplay.contains(".") {
-                print(textCurrentlyInDisplay)
                 displayLabel.text = textCurrentlyInDisplay + digit
+                userIsInTheMiddleOfTyping = true
             }
         } else if userIsInTheMiddleOfTyping {
             displayLabel.text = textCurrentlyInDisplay + digit
