@@ -2,21 +2,37 @@ import UIKit
 
 class ViewController: UIViewController {
     private lazy var faceView = {
-        let pinchRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(changeScale))
+        let handler = #selector(FaceView.changeScale)
+        let pinchRecognizer = UIPinchGestureRecognizer(target: $0, action: handler)
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(toggleEyes))
+        let swipeUpRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(increaseHappiness))
+        let swipeDownRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(decreaseHappiness))
+        swipeUpRecognizer.direction = .up
+        swipeDownRecognizer.direction = .down
+        tapRecognizer.numberOfTapsRequired = 1
         $0.addGestureRecognizer(pinchRecognizer)
+        $0.addGestureRecognizer(tapRecognizer)
+        $0.addGestureRecognizer(swipeUpRecognizer)
+        $0.addGestureRecognizer(swipeDownRecognizer)
         $0.backgroundColor = .systemBackground
         $0.contentMode = .redraw
         return $0
     }(FaceView())
 
-    @objc func changeScale(_ sender: UIPinchGestureRecognizer) {
-        switch sender.state {
-        case .changed, .ended:
-            faceView.scale *= sender.scale
-            sender.scale = 1
-        default: break
+    @objc func increaseHappiness() {
+        expression.increaseHappiness()
+    }
+
+    @objc func decreaseHappiness() {
+        expression.decreaseHappiness()
+    }
+
+    @objc func toggleEyes(_ sender: UITapGestureRecognizer) {
+        if sender.state == .ended {
+            expression.toggleEyes()
         }
     }
+    
     var expression = FacialExpression(eyes: .open, mouth: .grin) {
         didSet { updateUI() }
     }

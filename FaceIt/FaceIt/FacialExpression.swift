@@ -23,12 +23,19 @@ struct FacialExpression {
         }
     }
 
-    var sadder: FacialExpression {
-        FacialExpression(eyes: self.eyes, mouth: self.mouth.sadder)
+    mutating func toggleEyes() {
+        switch eyes {
+        case .open: eyes = .closed
+        default: eyes = .open
+        }
     }
 
-    var happier: FacialExpression {
-        FacialExpression(eyes: self.eyes, mouth: self.mouth.happier)
+    mutating func increaseHappiness() {
+        mouth = mouth.happier
+    }
+
+    mutating func decreaseHappiness() {
+        mouth = mouth.sadder
     }
 
     var eyes: Eyes

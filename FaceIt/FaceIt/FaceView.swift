@@ -89,7 +89,7 @@ class FaceView: UIView {
         pathForMouth().stroke()
     }
 
-    var scale = 0.9 { didSet { setNeedsDisplay() }}
+    private var scale = 0.9 { didSet { setNeedsDisplay() }}
     private var color = UIColor.green
     private var eyesOpen = false { didSet { setNeedsDisplay() }}
     private var lineWidth = 5.0
