@@ -7,19 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0229B54D2AD3014200CE9900 /* VCLLoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229B54C2AD3014200CE9900 /* VCLLoggingViewController.swift */; };
 		0272BE332ACF90A000A89C87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0272BE322ACF90A000A89C87 /* AppDelegate.swift */; };
-		0272BE372ACF90A000A89C87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0272BE362ACF90A000A89C87 /* ViewController.swift */; };
+		0272BE372ACF90A000A89C87 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0272BE362ACF90A000A89C87 /* FaceViewController.swift */; };
 		0272BE3C2ACF90A200A89C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0272BE3B2ACF90A200A89C87 /* Assets.xcassets */; };
 		0272BE3F2ACF90A200A89C87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0272BE3D2ACF90A200A89C87 /* LaunchScreen.storyboard */; };
 		0272BE472ACF910C00A89C87 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0272BE462ACF910C00A89C87 /* FaceView.swift */; };
 		0272BE4B2ACFAC9D00A89C87 /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = 0272BE4A2ACFAC9D00A89C87 /* face.png */; };
 		02A2AA1A2AD05BED000DA7A7 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A2AA192AD05BED000DA7A7 /* FacialExpression.swift */; };
+		02DD18202AD15F0E003C8B24 /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD181F2AD15F0E003C8B24 /* EmotionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0229B54C2AD3014200CE9900 /* VCLLoggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLLoggingViewController.swift; sourceTree = "<group>"; };
 		0272BE2F2ACF90A000A89C87 /* FaceIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0272BE322ACF90A000A89C87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0272BE362ACF90A000A89C87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0272BE362ACF90A000A89C87 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 		0272BE3B2ACF90A200A89C87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0272BE3E2ACF90A200A89C87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0272BE402ACF90A200A89C87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 		0272BE482ACFAC5100A89C87 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0272BE4A2ACFAC9D00A89C87 /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face.png; sourceTree = "<group>"; };
 		02A2AA192AD05BED000DA7A7 /* FacialExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
+		02DD181F2AD15F0E003C8B24 /* EmotionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +66,11 @@
 			isa = PBXGroup;
 			children = (
 				0272BE322ACF90A000A89C87 /* AppDelegate.swift */,
-				0272BE362ACF90A000A89C87 /* ViewController.swift */,
+				0272BE362ACF90A000A89C87 /* FaceViewController.swift */,
+				02DD181F2AD15F0E003C8B24 /* EmotionsViewController.swift */,
 				0272BE462ACF910C00A89C87 /* FaceView.swift */,
 				02A2AA192AD05BED000DA7A7 /* FacialExpression.swift */,
+				0229B54C2AD3014200CE9900 /* VCLLoggingViewController.swift */,
 				0272BE3B2ACF90A200A89C87 /* Assets.xcassets */,
 				0272BE3D2ACF90A200A89C87 /* LaunchScreen.storyboard */,
 				0272BE402ACF90A200A89C87 /* Info.plist */,
@@ -151,8 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0272BE372ACF90A000A89C87 /* ViewController.swift in Sources */,
+				0229B54D2AD3014200CE9900 /* VCLLoggingViewController.swift in Sources */,
+				0272BE372ACF90A000A89C87 /* FaceViewController.swift in Sources */,
 				0272BE332ACF90A000A89C87 /* AppDelegate.swift in Sources */,
+				02DD18202AD15F0E003C8B24 /* EmotionsViewController.swift in Sources */,
 				02A2AA1A2AD05BED000DA7A7 /* FacialExpression.swift in Sources */,
 				0272BE472ACF910C00A89C87 /* FaceView.swift in Sources */,
 			);

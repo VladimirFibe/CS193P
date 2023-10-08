@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class FaceViewController: VCLLoggingViewController {
     private lazy var faceView = {
         let handler = #selector(FaceView.changeScale)
         let pinchRecognizer = UIPinchGestureRecognizer(target: $0, action: handler)
