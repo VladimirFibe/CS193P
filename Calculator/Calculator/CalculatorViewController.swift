@@ -14,7 +14,7 @@ final class CalculatorViewController: UIViewController {
     }
 
     let titles = [
-        ["e", "√", "cos", "𝝿"],
+        ["e", "√", "✅", "𝝿"],
         ["C", "±", "%", "÷"],
         ["7", "8", "9", "×"],
         ["4", "5", "6", "−"],
@@ -56,6 +56,10 @@ final class CalculatorViewController: UIViewController {
                 }
             }
             stackView.addArrangedSubview(rowStackView)
+        }
+        brain.addUnaryOperation(named: "✅") { [unowned self] in
+            self.displayLabel.textColor = .systemGreen
+            return sqrt($0)
         }
     }
 
