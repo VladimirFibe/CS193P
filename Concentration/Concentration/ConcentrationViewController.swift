@@ -12,6 +12,13 @@ final class ConcentrationViewController: UIViewController {
     @IBOutlet private weak var flipCountLabel: UILabel! {
         didSet { updateFlipCountLabel() }
     }
+    var theme: String? {
+        didSet {
+            emojiChoices = theme ?? "👻🎃🤡💀🤖🤠😹😈"
+            emoji = [:]
+            updateViewFromModel()
+        }
+    }
     private var emojiChoices = "👻🎃🤡💀🤖🤠😹😈"
     private var emoji: [Card: String] = [:]
     override func viewDidLoad() {
@@ -28,6 +35,7 @@ final class ConcentrationViewController: UIViewController {
     }
     
     private func updateViewFromModel() {
+        guard buttons != nil else { return }
         for index in buttons.indices {
             let button = buttons[index]
             let card = game.cards[index]

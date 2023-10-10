@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02F91C472AD58A230022ECEB /* ConcetrationThemeChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F91C462AD58A230022ECEB /* ConcetrationThemeChooserViewController.swift */; };
 		272D3C4A29C560C4002F7EBF /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D3C4929C560C4002F7EBF /* Concentration.swift */; };
 		272D3C4C29C5619C002F7EBF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D3C4B29C5619C002F7EBF /* Card.swift */; };
 		2761D11B29C4850800B388C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2761D11A29C4850800B388C8 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		023D692F2A7775830072AA04 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		02F91C462AD58A230022ECEB /* ConcetrationThemeChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcetrationThemeChooserViewController.swift; sourceTree = "<group>"; };
 		272D3C4929C560C4002F7EBF /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		272D3C4B29C5619C002F7EBF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		2761D11729C4850800B388C8 /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				2761D11E29C4850800B388C8 /* ConcentrationViewController.swift */,
+				02F91C462AD58A230022ECEB /* ConcetrationThemeChooserViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -143,7 +146,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					2761D11629C4850800B388C8 = {
 						CreatedOnToolsVersion = 14.2;
@@ -191,6 +194,7 @@
 				272D3C4C29C5619C002F7EBF /* Card.swift in Sources */,
 				2761D11B29C4850800B388C8 /* AppDelegate.swift in Sources */,
 				2761D11D29C4850800B388C8 /* SceneDelegate.swift in Sources */,
+				02F91C472AD58A230022ECEB /* ConcetrationThemeChooserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +256,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -312,6 +317,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
