@@ -1,9 +1,19 @@
 import UIKit
 
 class PlayingCardView: UIView {
-    var rank = 3 { didSet { setNeedsDisplay(); setNeedsLayout() }}
+    var rank = 12 { didSet { setNeedsDisplay(); setNeedsLayout() }}
     var suit = "❤️" { didSet { setNeedsDisplay(); setNeedsLayout() }}
     var isFaceUp = true { didSet { setNeedsDisplay(); setNeedsLayout() }}
+    var faceCardScale = SizeRatio.faceCardImageSizeToBoundsSize { didSet { setNeedsDisplay()}}
+
+    @objc func adjustFaceCardScale(_ sender: UIPinchGestureRecognizer) {
+        switch sender.state {
+        case .changed, .ended:
+            faceCardScale *= sender.scale
+            sender.scale = 1.0
+        default: break
+        }
+    }
 
     private var cornerString: NSAttributedString {
         centeredAttributedString(rankString + "\n" + suit, fontSize: cornerFontSize)
@@ -44,7 +54,7 @@ class PlayingCardView: UIView {
         roundRect.fill()
         if isFaceUp {
             if let faceCardImage = UIImage(named: rankString + suit) {
-                faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImageSizeToBoundsSize))
+                faceCardImage.draw(in: bounds.zoom(by: faceCardScale))
             } else {
                 drawPips()
             }

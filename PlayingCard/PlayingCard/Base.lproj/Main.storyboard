@@ -20,23 +20,35 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMK-af-AQA" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                 <rect key="frame" x="16" y="137.33333333333331" width="361" height="577.33333333333348"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" priority="750" constant="800" id="D85-AH-3um"/>
                                     <constraint firstAttribute="width" secondItem="XMK-af-AQA" secondAttribute="height" multiplier="5:8" id="jFP-gi-b7s"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="t2Y-1N-kSW" appends="YES" id="z8z-Hf-Asz"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="XMK-af-AQA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="EXk-nN-U4N"/>
-                            <constraint firstItem="XMK-af-AQA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Nc9-Er-nlF"/>
+                            <constraint firstItem="XMK-af-AQA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="999" constant="16" id="Nc9-Er-nlF"/>
                             <constraint firstItem="XMK-af-AQA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ndf-dm-XEk"/>
                             <constraint firstItem="XMK-af-AQA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dBa-G1-J6e"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playingCardVew" destination="XMK-af-AQA" id="pZh-vt-mx2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="t2Y-1N-kSW">
+                    <connections>
+                        <action selector="flipCard:" destination="BYZ-38-t0r" id="C0b-NK-IwX"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="104.58015267175573" y="-2.1126760563380285"/>
         </scene>

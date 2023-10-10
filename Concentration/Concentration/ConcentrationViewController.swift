@@ -1,6 +1,6 @@
 import UIKit
 
-final class ViewController: UIViewController {
+final class ConcentrationViewController: UIViewController {
     private lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
     private(set) var flipCount = 0 {
         didSet { updateFlipCountLabel() }
