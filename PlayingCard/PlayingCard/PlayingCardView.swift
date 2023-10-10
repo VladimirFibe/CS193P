@@ -1,9 +1,9 @@
 import UIKit
 
 class PlayingCardView: UIView {
-    var rank = 10 { didSet { setNeedsDisplay(); setNeedsLayout() }}
+    var rank = 3 { didSet { setNeedsDisplay(); setNeedsLayout() }}
     var suit = "❤️" { didSet { setNeedsDisplay(); setNeedsLayout() }}
-    var isFaceUp = false { didSet { setNeedsDisplay(); setNeedsLayout() }}
+    var isFaceUp = true { didSet { setNeedsDisplay(); setNeedsLayout() }}
 
     private var cornerString: NSAttributedString {
         centeredAttributedString(rankString + "\n" + suit, fontSize: cornerFontSize)
