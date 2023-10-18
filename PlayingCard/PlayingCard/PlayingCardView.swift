@@ -1,8 +1,9 @@
 import UIKit
 
 class PlayingCardView: UIView {
-    var rank = 12 { didSet { setNeedsDisplay(); setNeedsLayout() }}
-    var suit = "❤️" { didSet { setNeedsDisplay(); setNeedsLayout() }}
+    var card = PlayingCard(suit: .hearts, rank: .numeric(1)) { didSet { setNeedsDisplay(); setNeedsLayout() }}
+    private var rank: Int { card.rank.order }
+    private var suit: String { card.suit.rawValue }
     var isFaceUp = true { didSet { setNeedsDisplay(); setNeedsLayout() }}
     var faceCardScale = SizeRatio.faceCardImageSizeToBoundsSize { didSet { setNeedsDisplay()}}
 
@@ -53,7 +54,7 @@ class PlayingCardView: UIView {
         UIColor.white.setFill()
         roundRect.fill()
         if isFaceUp {
-            if let faceCardImage = UIImage(named: rankString + suit) {
+            if !card.image.isEmpty, let faceCardImage = UIImage(named: card.image) {
                 faceCardImage.draw(in: bounds.zoom(by: faceCardScale))
             } else {
                 drawPips()
@@ -144,7 +145,7 @@ extension PlayingCardView {
         static let cornerFontSizeToBoundsHeight = 0.085
         static let cornerRadiusToBoundsHeight = 0.06
         static let cornerOffsetToCornerRadius = 0.33
-        static let faceCardImageSizeToBoundsSize = 0.75
+        static let faceCardImageSizeToBoundsSize = 0.65
     }
 
     private var cornerRadius: CGFloat {

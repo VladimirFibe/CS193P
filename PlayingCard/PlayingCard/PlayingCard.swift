@@ -1,11 +1,29 @@
 import Foundation
 
-struct PlayingCard: CustomStringConvertible {
+struct PlayingCard: CustomStringConvertible, Equatable {
+    static func == (lhs: PlayingCard, rhs: PlayingCard) -> Bool {
+        lhs.rank.order == rhs.rank.order && lhs.suit == rhs.suit
+    }
+
     var suit: Suit
     var rank: Rank
     var description: String {
         "\(rank)\(suit)"
     }
+    
+    var image: String {
+        switch rank {
+        case .face(let kind):
+            switch suit {
+            case .spades: return "S" + kind
+            case .hearts: return "H" + kind
+            case .diamonds: return "D" + kind
+            case .clubs: return "C" + kind
+            }
+        default: return ""
+        }
+    }
+
     enum Suit: String, CustomStringConvertible {
         case spades = "♠️"
         case hearts = "❤️"

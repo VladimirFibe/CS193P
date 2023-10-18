@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FuB-lj-vTw">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image View Controller-->
+        <scene sceneID="Zmi-3T-jno">
+            <objects>
+                <viewController id="FuB-lj-vTw" customClass="ImageViewController" customModule="Cassini" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ySL-G3-lss">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wer-Aq-TrW">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="851" translatesAutoresizingMaskIntoConstraints="NO" id="aoE-3m-2qA">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="851"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aoE-3m-2qA" firstAttribute="leading" secondItem="Wer-Aq-TrW" secondAttribute="leading" id="3PL-1O-5xc"/>
+                                    <constraint firstAttribute="bottom" secondItem="aoE-3m-2qA" secondAttribute="bottom" id="KCQ-pd-gSt"/>
+                                    <constraint firstItem="aoE-3m-2qA" firstAttribute="top" secondItem="Wer-Aq-TrW" secondAttribute="top" id="bt5-ND-wvw"/>
+                                    <constraint firstItem="aoE-3m-2qA" firstAttribute="trailing" secondItem="Wer-Aq-TrW" secondAttribute="trailing" id="xub-XI-gKC"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="PrZ-ho-noq"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="LKZ-Iz-BFl"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yWf-En-pLt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Wer-Aq-TrW" secondAttribute="bottom" id="LJ5-kU-RJT"/>
+                            <constraint firstItem="Wer-Aq-TrW" firstAttribute="top" secondItem="ySL-G3-lss" secondAttribute="top" id="VWA-Ye-09i"/>
+                            <constraint firstItem="Wer-Aq-TrW" firstAttribute="trailing" secondItem="ySL-G3-lss" secondAttribute="trailing" id="b0T-YK-vAG"/>
+                            <constraint firstItem="Wer-Aq-TrW" firstAttribute="leading" secondItem="ySL-G3-lss" secondAttribute="leading" id="fMt-le-vzq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="aoE-3m-2qA" id="5LR-Y8-Suy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7V-mv-LbK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98.473282442748086" y="2.8169014084507045"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
