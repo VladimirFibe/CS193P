@@ -14,6 +14,7 @@
 		0228D5CB2ADFA5ED007776C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0228D5C92ADFA5ED007776C6 /* LaunchScreen.storyboard */; };
 		0228D5D32ADFA674007776C6 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0228D5D22ADFA674007776C6 /* ImageViewController.swift */; };
 		0228D5D52ADFAD0D007776C6 /* DemoURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0228D5D42ADFAD0D007776C6 /* DemoURLs.swift */; };
+		0228D5D72ADFC80D007776C6 /* CassiniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0228D5D62ADFC80D007776C6 /* CassiniViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0228D5CC2ADFA5ED007776C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0228D5D22ADFA674007776C6 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		0228D5D42ADFAD0D007776C6 /* DemoURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoURLs.swift; sourceTree = "<group>"; };
+		0228D5D62ADFC80D007776C6 /* CassiniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CassiniViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0228D5C02ADFA5EC007776C6 /* SceneDelegate.swift */,
 				0228D5C42ADFA5EC007776C6 /* Main.storyboard */,
 				0228D5D22ADFA674007776C6 /* ImageViewController.swift */,
+				0228D5D62ADFC80D007776C6 /* CassiniViewController.swift */,
 				0228D5C72ADFA5ED007776C6 /* Assets.xcassets */,
 				0228D5C92ADFA5ED007776C6 /* LaunchScreen.storyboard */,
 				0228D5CC2ADFA5ED007776C6 /* Info.plist */,
@@ -144,6 +147,7 @@
 				0228D5D52ADFAD0D007776C6 /* DemoURLs.swift in Sources */,
 				0228D5BF2ADFA5EC007776C6 /* AppDelegate.swift in Sources */,
 				0228D5D32ADFA674007776C6 /* ImageViewController.swift in Sources */,
+				0228D5D72ADFC80D007776C6 /* CassiniViewController.swift in Sources */,
 				0228D5C12ADFA5EC007776C6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

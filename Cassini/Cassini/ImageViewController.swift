@@ -23,39 +23,58 @@ class ImageViewController: UIViewController {
         return $0
     }(UIImageView())
 
+    lazy var spinner: UIActivityIndicatorView = {
+        view.addSubview($0)
+        $0.hidesWhenStopped = true
+        $0.style = .large
+        $0.color = .systemBlue
+        return $0
+    }(UIActivityIndicatorView())
+
     private func fetchImage() {
         if let url = imageURL {
-            if let urlContents = try? Data(contentsOf: url) {
-                image = UIImage(data: urlContents)
+            spinner.startAnimating()
+            DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+                guard let imageData = try? Data(contentsOf: url), 
+                         url == self?.imageURL else { return }
+                DispatchQueue.main.async {
+                    self?.image = UIImage(data: imageData)
+                }
+
             }
+//            let session = URLSession(configuration: .default)
+//            let task = session.dataTask(with: url) { data, response, error in
+//                guard let data else { return }
+//                let image = UIImage(data: data)
+//                DispatchQueue.main.async {
+//                    self.image = image
+//                }
+//
+//            }
+//            task.resume()
         }
     }
 
-    private var image: UIImage? {
+    var image: UIImage? {
         get { imageView.image }
         set {
             imageView.image = newValue
             imageView.sizeToFit()
             scrollView.contentSize = imageView.frame.size
+            spinner.stopAnimating()
         }
     }
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         scrollView.frame = view.bounds
+        spinner.center = view.center
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if imageView.image == nil {
             fetchImage()
-        }
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if imageURL == nil {
-            imageURL = DemoURLs.stanford
         }
     }
 }
